@@ -1,9 +1,9 @@
 {
     "development": {
       "username": "root",
-      "password": "M09270588",
-      "database": "sequelize_example",
-      "host": "127.0.0.1",
+      "password": "v3lazqu3z", 
+      "database": "Test_ORM", 
+      "host": "localhost",
       "dialect": "mysql"
     }
   }
