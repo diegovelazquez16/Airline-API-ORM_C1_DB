@@ -16,7 +16,8 @@ db.connection = sequelize;
 
 // Importar modelos
 db.User = require('./user')(sequelize, Sequelize);
-db.Airplane = require('./airplane')(sequelize, Sequelize); // Agregamos el modelo Airplane
+db.Airplane = require('./airplane')(sequelize, Sequelize); 
+db.Flight = require('./flight')(sequelize, Sequelize);  
 
 
 module.exports = db;

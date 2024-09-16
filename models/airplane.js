@@ -3,7 +3,8 @@ module.exports = (sequelize, DataTypes) => {
       idairplane: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: true
       },
       NameP: {
         type: DataTypes.STRING(100),
