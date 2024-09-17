@@ -22,7 +22,7 @@ const DataBank = sequelize.define('DataBank', {
   idUser: {
     type: DataTypes.INTEGER,
     references: {
-      model: User,
+      model: 'Users',
       key: 'iduser',
     },
   },

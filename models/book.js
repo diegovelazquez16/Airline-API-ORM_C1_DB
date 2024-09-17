@@ -1,6 +1,7 @@
-const User = require('./user');  
+const Users = require('./user');  
 //importar los datos restantes de las demas tablas uwu
 const Passenger = require('./passenger');
+const Flight = require('./flight');
 module.exports = (sequelize, DataTypes) => {
 const Book = sequelize.define('Book', {
   idbook: {
@@ -11,14 +12,14 @@ const Book = sequelize.define('Book', {
   iduser: {
     type: DataTypes.INTEGER,
     references: {
-      model: User,
+      model: 'users',
       key: 'iduser',
     },
   },
   idflight: {
     type: DataTypes.INTEGER,
     references: {
-      model: Flight,
+      model: 'flights',
       key: 'idflight',
     },
   },
@@ -29,7 +30,7 @@ const Book = sequelize.define('Book', {
   idpassenger: {
     type: DataTypes.INTEGER,
     references: {
-      model: Passenger,
+      model: 'passengers',
       key: 'idpassenger',
     },
   },
