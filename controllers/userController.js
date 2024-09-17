@@ -1,7 +1,6 @@
 const { User } = require('../models');
 const bcrypt = require('bcrypt');
 
-// Crear un usuario
 const createUser = async (req, res) => {
   try {
     const { pass, ...userData } = req.body;
@@ -13,7 +12,6 @@ const createUser = async (req, res) => {
   }
 };
 
-// Obtener todos los usuarios
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.findAll();
@@ -23,7 +21,6 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-// Obtener un usuario por ID
 const getUserById = async (req, res) => {
   try {
     const user = await User.findByPk(req.params.id);
@@ -37,7 +34,6 @@ const getUserById = async (req, res) => {
   }
 };
 
-// Actualizar un usuario
 const updateUser = async (req, res) => {
   try {
     const { pass, ...userData } = req.body;
@@ -52,7 +48,6 @@ const updateUser = async (req, res) => {
   }
 };
 
-// Eliminar un usuario
 const deleteUser = async (req, res) => {
   try {
     const deleted = await User.destroy({ where: { iduser: req.params.id } });
@@ -66,12 +61,10 @@ const deleteUser = async (req, res) => {
   }
 };
 
-// Login de usuario
 const loginUser = async (req, res) => {
   try {
     const { firstName, pass } = req.body;
 
-    // Verifica que se hayan proporcionado both campos
     if (!firstName || !pass) {
       return res.status(400).json({ message: 'Both fields are required: firstName and pass' });
     }

@@ -1,5 +1,4 @@
 const { Flight } = require('../models');
-
 const createFlight = async (req, res) => {
   try {
     const flight = await Flight.create(req.body);
@@ -8,7 +7,6 @@ const createFlight = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
 const getAllFlights = async (req, res) => {
   try {
     const flights = await Flight.findAll();
@@ -47,7 +45,6 @@ const updateFlight = async (req, res) => {
   }
 };
 
-// Eliminar un vuelo
 const deleteFlight = async (req, res) => {
   try {
     const deleted = await Flight.destroy({

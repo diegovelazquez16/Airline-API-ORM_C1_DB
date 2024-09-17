@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
       idairplane: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'airplanes', // Este es el nombre con la que la tabla que genera este modelo esta relacionada
+          model: 'airplanes', 
           key: 'idairplane'
         },
         allowNull: false

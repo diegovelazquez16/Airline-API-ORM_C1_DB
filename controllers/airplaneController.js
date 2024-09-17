@@ -1,5 +1,4 @@
 const { Airplane } = require('../models');
-
 const createAirplane = async (req, res) => {
   try {
     const airplane = await Airplane.create(req.body);
@@ -17,7 +16,6 @@ const getAllAirplanes = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
 const getAirplaneById = async (req, res) => {
   try {
     const airplane = await Airplane.findByPk(req.params.id);
@@ -30,7 +28,6 @@ const getAirplaneById = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
 const updateAirplane = async (req, res) => {
   try {
     const [updated] = await Airplane.update(req.body, {
