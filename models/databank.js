@@ -19,7 +19,7 @@ const DataBank = sequelize.define('DataBank', {
     type: DataTypes.STRING(100),
     allowNull: false,
   },
-  idUser: {
+  iduser: {
     type: DataTypes.INTEGER,
     references: {
       model: 'Users',

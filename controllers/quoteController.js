@@ -2,7 +2,8 @@ const { Quote, Book, Flight } = require('../models');
 
 const getQuote = async (req, res) => {
   try {
-    const { bookId, flightId } = req.params;
+    const bookId  = req.params.idb;
+    const flightId = req.params.idf;
     const book = await Book.findByPk(bookId);
     if (!book) {
       return res.status(404).json({ message: 'Booking not found' });

@@ -1,6 +1,5 @@
 const { Airplane } = require('../models');
 
-// Crear un avión
 const createAirplane = async (req, res) => {
   try {
     const airplane = await Airplane.create(req.body);
@@ -10,7 +9,6 @@ const createAirplane = async (req, res) => {
   }
 };
 
-// Obtener todos los aviones
 const getAllAirplanes = async (req, res) => {
   try {
     const airplanes = await Airplane.findAll();
@@ -20,7 +18,6 @@ const getAllAirplanes = async (req, res) => {
   }
 };
 
-// Obtener un avión por ID
 const getAirplaneById = async (req, res) => {
   try {
     const airplane = await Airplane.findByPk(req.params.id);
@@ -34,11 +31,10 @@ const getAirplaneById = async (req, res) => {
   }
 };
 
-// Actualizar un avión
 const updateAirplane = async (req, res) => {
   try {
     const [updated] = await Airplane.update(req.body, {
-      where: { idarplane: req.params.id }
+      where: { idairplane: req.params.id }
     });
     if (updated) {
       const updatedAirplane = await Airplane.findByPk(req.params.id);
@@ -51,7 +47,6 @@ const updateAirplane = async (req, res) => {
   }
 };
 
-// Eliminar un avión
 const deleteAirplane = async (req, res) => {
   try {
     const deleted = await Airplane.destroy({

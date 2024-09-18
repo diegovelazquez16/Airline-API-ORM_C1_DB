@@ -27,7 +27,7 @@ app.use('/api',databankRoutes);
 app.use('/api', passengerRoutes);
 app.use('/api', payRoutes);
 app.use('/api', quoteRoutes);
-app.use('/api', ticketRoutes);
+app.use('/api', ticketRoutes);
 
 
 module.exports = app;
