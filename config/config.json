@@ -1,0 +1,9 @@
+{
+    "development": {
+      "username": "root",
+      "password": "Ana0507belen", 
+      "database": "flights_db", 
+      "host": "localhost",
+      "dialect": "mysql"
+    }
+  }
